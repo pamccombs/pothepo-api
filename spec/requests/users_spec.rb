@@ -53,6 +53,7 @@ RSpec.describe 'Users API', type: :request do
   describe 'POST /users' do
     # valid payload
     let(:valid_attributes) { { username: 'Learn Elm', user_id: '1' } }
+    binding.pry
 
     context 'when the request is valid' do
       before { post '/users', params: valid_attributes }
