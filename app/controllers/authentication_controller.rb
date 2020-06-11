@@ -6,6 +6,14 @@ class AuthenticationController < ApplicationController
       AuthenticateUser.new(auth_params[:email], auth_params[:password]).call
     json_response(auth_token: auth_token)
   end
+  # #add signout method
+  # def signout
+  #   current_user.authenticate.destroy
+  # end
+
+  # def destroy
+  #   log_out
+  # end
 
   private
 
