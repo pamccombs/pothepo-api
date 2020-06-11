@@ -6,6 +6,8 @@ module V1
     def index
       # get current user videos
       @videos = Video.all
+      # get paginated current user videos
+      @videos = current_user.videos.paginate(page: params[:page], per_page: 20)
       json_response(@videos)
     end
 

@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# db/seeds.rb
+# seed 50 records
+50.times do
+    video = Video.create(title: Faker::Lorem.word, filepath: Faker::Lorem.word, description: Faker::Lorem.word, address_1: Faker::Lorem.word, address_2: Faker::Lorem.word, city: Faker::Lorem.word, state: Faker::Lorem.word, zip_code: Faker::Lorem.word, created_by: User.first.id)
+    
+  end
